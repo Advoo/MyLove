@@ -123,9 +123,7 @@
         const seconds = Math.flopr((distance %(1000 * 60))/1000);
         
 
-        document.getElementById("countdown").innerHTML =
-            "Countdown to our Valentine’s Day: " + days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds ❤️" ;
-
+        
     }, 1000);
 
     function yesClicked() {
@@ -134,12 +132,18 @@
     content.innerHTML = `
         <h1>And thats my babeee right thee❤️🥰</h1>
         <p>
-        look at that smilee 
-        No matter what comes neh babe , I’m with you. Always.
+        look at that smilee ON your pretty face❤️ :) !!          
+        No matter what comes in between us neh babe , I’m with you. Always. PERIOD!
         <br><br>
         Love, Advo 💌
         </p>
+
+        
     `;
+
+    document.getElementById("countdown").innerHTML =
+            "Countdown to our Valentine’s Day: " + days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds ❤️" ;
+
 }
     
 const noBtn = document.getElementById("noBtn");
@@ -168,5 +172,6 @@ noBtn.addEventListener("click", function(event) {
 
 </body>
 </html>
+
 
 
