@@ -129,24 +129,44 @@
     }, 1000);
 
     function yesClicked() {
-        document.body.innerHTML = `
-            <div class="background"></div>
-            <div class="content">
-                <h1>Thats my Babeee right theree ,look at your smile ❤️🥰</h1>
-                <p>No matter what comes bbey, I’m with you. Always. its about to get peachyyy <br><br>Love, Advoo 💌</p>
-            </div>
-        `;
-    }
+    const content = document.querySelector(".content");
 
-    function moveButton() {
-        const button = document.getElementById("noBtn");
-        const x = Math.random() * window.innerWidth * 0.8;
-        const y = Math.random() * window.innerHeight * 0.8;
-        button.style.left = x + "px";
-        button.style.top = y + "px";
-    }
+    content.innerHTML = `
+        <h1>And thats my babeee right thee❤️🥰</h1>
+        <p>
+        look at that smilee 
+        No matter what comes neh babe , I’m with you. Always.
+        <br><br>
+        Love, Advo 💌
+        </p>
+    `;
+}
+    
+const noBtn = document.getElementById("noBtn");
+
+function moveButton() {
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+
+    noBtn.style.position = "absolute";
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+}
+
+// Move when mouse gets close
+noBtn.addEventListener("mouseenter", moveButton);
+
+// Also move when clicked
+noBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    moveButton();
+});
+
+
+    
 </script>
 
 </body>
 </html>
+
 
